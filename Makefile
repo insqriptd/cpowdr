@@ -8,4 +8,4 @@ powdr: $(SRCS) $(HEADERS)
 	$(CC) $(SRCS) -o $@ -lm -lSDL2
 
 clean:
-	rm -f powdr src/*.o
+	rm -f powdr
