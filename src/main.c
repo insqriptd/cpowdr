@@ -31,13 +31,13 @@ int main () {
 										  WINDOW_HEIGHT,
 										  WINDOW_FLAGS);
 	if (!window) {
-		printf("Failed to create SDL window: %s\n", SDL_GetError());
+		fprintf(stderr, "Failed to create SDL window: %s\n", SDL_GetError());
 		return -1;
 	}
 
 	SDL_Renderer* renderer = renderInit(scene, window);
 	if (!renderer) {
-		printf("Failed to create SDL renderer: %s\n", SDL_GetError());
+		fprintf(stderr, "Failed to create SDL renderer: %s\n", SDL_GetError());
 		return -1;
 	}
 
