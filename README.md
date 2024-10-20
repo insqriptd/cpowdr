@@ -1,3 +1,7 @@
+# cpowdr
+
+![sand.gif](/res/sand.gif)
+
 # Compiling
 
 Just clone the repository and run `make` in the project directory.\
