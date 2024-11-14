@@ -1,12 +1,16 @@
-#include <SDL2/SDL_events.h>
 #include <stdbool.h>
 #include <stdio.h>
 #include <time.h>
 #include <unistd.h>
 
 #include <SDL2/SDL.h>
+#include <SDL2/SDL_events.h>
 #include <SDL2/SDL_render.h>
 #include <SDL2/SDL_video.h>
+
+#include <lua5.3/lua.h>
+#include <lua5.3/lualib.h>
+#include <lua5.3/lauxlib.h>
 
 #include "main.h"
 
@@ -15,6 +19,9 @@
 #include "sim.h"
 
 int main () {
+	lua_State* lua = luaL_newstate();
+	luaL_openlibs(lua);
+
 	Scene* scene = sceneInit();
 	Brush* brush = brushInit(scene);
 
